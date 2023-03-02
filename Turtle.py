@@ -61,8 +61,8 @@ score_display.write("Player 1: 0  Player 2: 0", align="center", font=("Arial", 2
 
 paddle1.sety(paddle1.ycor() + paddle1.dy)
 paddle2.sety(paddle2.ycor() + paddle2.dy)
-ball.setx(ball.xcor() + ball.dx)
-ball.sety(ball.ycor() + ball.dy)
+ #ball.setx(ball.xcor() + ball.dx)
+#ball.sety(ball.ycor() + ball.dy)
 
 
 # Check for game over conditions 
@@ -77,5 +77,9 @@ winner  = "player2"
 if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle2.ycor() + 50 and ball.ycor() > paddle2.ycor() - 50):
     ball.setx(340)
     ball.dx *= -1
-    
+elif (ball.xcor() <-340 and ball.xcor() > -350 and (ball.ycor() < paddle1.ycor(_) + 50 and paddle1.ycor() - 50) ):
+    ball.setx(-340)
+    ball.dx *= -1
+
+      
      
